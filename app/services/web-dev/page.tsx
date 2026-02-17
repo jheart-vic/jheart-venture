@@ -75,20 +75,49 @@ export default function WebDevPage() {
               ))}
             </div>
 
-            <Reveal delay={0.32} className="mt-14 rounded-xl bg-navy p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Our Workflow</h3>
-              <div className="flex flex-wrap gap-3 items-center">
-                <span className="bg-gold text-navy px-4 py-2 rounded-full font-semibold">Discover</span>
-                <span className="text-gold">→</span>
-                <span className="bg-gold text-navy px-4 py-2 rounded-full font-semibold">Design</span>
-                <span className="text-gold">→</span>
-                <span className="bg-gold text-navy px-4 py-2 rounded-full font-semibold">Build</span>
-                <span className="text-gold">→</span>
-                <span className="bg-gold text-navy px-4 py-2 rounded-full font-semibold">Launch</span>
-                <span className="text-gold">→</span>
-                <span className="bg-gold text-navy px-4 py-2 rounded-full font-semibold">Support</span>
-              </div>
-            </Reveal>
+<Reveal delay={0.32} className="mt-14 rounded-xl bg-navy p-8 text-white">
+<h3 className="text-2xl font-bold mb-4 text-center">Our Workflow</h3>
+
+<div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 items-center sm:justify-center">
+  {/* 1 */}
+  <span className="bg-gold text-navy px-4 py-2 rounded-full font-semibold">
+    Discover
+  </span>
+
+  <span className="text-gold text-xl sm:hidden">↓</span>
+  <span className="text-gold sm:inline hidden">→</span>
+
+  {/* 2 */}
+  <span className="bg-gold text-navy px-4 py-2 rounded-full font-semibold">
+    Design
+  </span>
+
+  <span className="text-gold text-xl sm:hidden">↓</span>
+  <span className="text-gold sm:inline hidden">→</span>
+
+  {/* 3 */}
+  <span className="bg-gold text-navy px-4 py-2 rounded-full font-semibold">
+    Build
+  </span>
+
+  <span className="text-gold text-xl sm:hidden">↓</span>
+  <span className="text-gold sm:inline hidden">→</span>
+
+  {/* 4 */}
+  <span className="bg-gold text-navy px-4 py-2 rounded-full font-semibold">
+    Launch
+  </span>
+
+  <span className="text-gold text-xl sm:hidden">↓</span>
+  <span className="text-gold sm:inline hidden">→</span>
+
+  {/* 5 */}
+  <span className="bg-gold text-navy px-4 py-2 rounded-full font-semibold">
+    Support
+  </span>
+</div>
+</Reveal>
+
 
             <Reveal delay={0.38} className="mt-10 rounded-xl border-2 border-gold p-8 bg-gold-light">
               <h3 className="text-2xl font-bold text-navy mb-4">Technologies We Use</h3>
