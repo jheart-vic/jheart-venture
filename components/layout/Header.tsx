@@ -42,7 +42,7 @@ function NavLink({
       {active ? (
         <motion.span
           layoutId="nav-underline"
-          className="absolute left-0 right-0 -bottom-1 h-0.5 rounded bg-gold"
+          className="absolute left-0 right-0 md:-bottom-1 h-0.5 rounded bg-gold md:block hidden"
           transition={{ duration: 0.25, ease: "easeOut" }}
         />
       ) : null}
@@ -67,7 +67,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur shadow-xl bg-navy">
       <div className="container mx-auto flex h-20 items-center justify-between px-6">
         <Link href="/" className="text-2xl font-bold text-gold hover:text-gold-dark transition-colors flex items-center gap-2">
-       
+
             <Image
               src="/images/jh-logo1.png"
             alt="Company Logo"
@@ -134,6 +134,7 @@ export default function Header() {
           <>
             <motion.div
               className="fixed inset-0 z-40 bg-black/50 md:hidden"
+              style={{ pointerEvents: mobileOpen ? "auto" : "none" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
