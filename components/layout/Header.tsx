@@ -42,7 +42,7 @@ function NavLink({
       {active ? (
         <motion.span
           layoutId="nav-underline"
-          className="absolute left-0 right-0 md:-bottom-1 h-0.5 rounded bg-gold md:block hidden"
+          className="absolute left-0 right-0 bottom-0 h-0.5 rounded bg-gold hidden md:block"
           transition={{ duration: 0.25, ease: "easeOut" }}
         />
       ) : null}
@@ -101,7 +101,7 @@ export default function Header() {
             type="button"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             onClick={() => setMobileOpen((v) => !v)}
-            className="inline-flex items-center justify-center rounded-lg border-2 border-gold px-3 py-2 md:hidden hover:bg-gold/10 transition-colors"
+            className="inline-flex items-center justify-center rounded-lg border-2 border-gold px-3 py-2 md:hidden hover:bg-gold/10 transition-colors z-60"
           >
             <span className="sr-only">Menu</span>
             <div className="relative h-4 w-5">
@@ -129,14 +129,14 @@ export default function Header() {
       </div>
 
       {/* Mobile menu panel */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {mobileOpen ? (
           <>
             <motion.div
               className="fixed inset-0 z-40 bg-black/50 md:hidden"
-              style={{ pointerEvents: mobileOpen ? "auto" : "none" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
+              // style={{ pointerEvents: mobileOpen ? "auto" : "none" }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileOpen(false)}
             />
